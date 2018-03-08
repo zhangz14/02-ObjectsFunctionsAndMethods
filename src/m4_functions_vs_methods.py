@@ -88,6 +88,7 @@ def main():
     ###########################################################################
     try_methods()
     try_functions()
+    try_methods_and_functions()
     window.close_on_mouse_click()  # Your code must be ABOVE this statement
 
 
@@ -193,6 +194,7 @@ def try_methods():
     abcd.forward(50)
     abcd.backward(100)
 
+
 def try_functions():
     # IMPORTANT: Read the NOTE below before you try to solve this TO-DO!
     """
@@ -211,9 +213,10 @@ def try_functions():
     #    HINT: see   jump_and_move_turtle   above.
     #
     ###########################################################################
-    jump_and_move_turtle(200,100,300,30)
-    jump_and_move_turtle(100,200,0,0)
-    jump_and_move_turtle(-50,50,100,100)
+    jump_and_move_turtle(200, 100, 300, 30)
+    jump_and_move_turtle(100, 200, 0, 0)
+    jump_and_move_turtle(-50, 50, 100, 100)
+
 
 def try_methods_and_functions():
     # IMPORTANT: Read the NOTE below before you try to solve this TO-DO!
@@ -249,7 +252,7 @@ def try_methods_and_functions():
       8. Draw a SQUARE whose sides are each of length 50.
     """
     ###########################################################################
-    # TODO: 5. Implement and test this function, per its doc-string above.
+    # DONE: 5. Implement and test this function, per its doc-string above.
     #    (To test it, put a statement in   main   that calls this function.)
     #
     #   NOTE: This function should ** CALL ** the
@@ -257,21 +260,22 @@ def try_methods_and_functions():
     #   function defined above.  If you don't see why, ** ASK FOR HELP. **
     #
     ###########################################################################
-xyz = rg.SimpleTurtle
-xyz.pen = rg.Pen('blue', 5)
-xyz.speed = 10
-xyz.backward(150)
-xyz.speed = 1
-draw_many_squares(xyz,2,100,30)
-xyz.speed = 5
-draw_many_squares(xyz,10,50,15)
-xyz.speed = 100
-xyz.pen = rg.Pen('blue', 35)
-draw_many_squares(xyz,8,300,60)
-xyz.pen = rg.Pen('black', 3)
-xyz.backward(200)
-xyz.draw_circle(30)
-xyz.draw_square(50)
+    xyz = rg.SimpleTurtle()
+    xyz.pen = rg.Pen('blue', 5)
+    xyz.speed = 10
+    xyz.backward(150)
+    xyz.speed = 1
+    draw_many_squares(xyz, 2, 100, 30)
+    xyz.speed = 5
+    draw_many_squares(xyz, 10, 50, 15)
+    xyz.speed = 100
+    xyz.pen = rg.Pen('blue', 35)
+    draw_many_squares(xyz, 8, 300, 60)
+    xyz.pen = rg.Pen('black', 3)
+    xyz.backward(200)
+    xyz.draw_circle(30)
+    xyz.draw_square(50)
+
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
